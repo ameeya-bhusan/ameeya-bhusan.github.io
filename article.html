@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article Title — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- KaTeX (via CDN). Write math as $inline$ or $$display$$ (also \( \) and \[ \]). -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.querySelector('.article'), {
+      delimiters: [
+        {left: '$$',  right: '$$',  display: true},
+        {left: '\\[', right: '\\]', display: true},
+        {left: '$',   right: '$',   display: false},
+        {left: '\\(', right: '\\)', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a class="active" href="blog.html">Blog</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <header class="article-head">
+    <div class="kicker">Theory &middot; Notes</div>
+    <h1>A Long-Form Article Title That Can Wrap Onto Two Lines</h1>
+    <div class="byline">Your Name &middot; October 15, 2026 &middot; 12 min read</div>
+  </header>
+
+  <article class="article">
+
+    <p>
+      This is the opening paragraph. The body font is a serif at roughly 19&nbsp;px with
+      a line-height of 1.8 and a narrow measure (about 65&ndash;70 characters per line),
+      which keeps long technical prose comfortable to read. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </p>
+
+    <h2>1. Inline and Display Equations</h2>
+
+    <p>
+      Inline math sits in the text, for example the energy $E = mc^2$ or a vector
+      $\mathbf{x} \in \mathbb{R}^n$. Display equations are centred on their own line:
+    </p>
+
+    $$ i\hbar \frac{\partial}{\partial t}\,\Psi(\mathbf{r},t) = \left[-\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r},t)\right]\Psi(\mathbf{r},t) $$
+
+    <p>
+      Aligned multi-line derivations work as well:
+    </p>
+
+    $$
+    \begin{aligned}
+      \hat{H} &= \sum_{pq} h_{pq}\, a_p^\dagger a_q + \frac{1}{2}\sum_{pqrs} g_{pqrs}\, a_p^\dagger a_q^\dagger a_s a_r \\
+              &= \hat{H}_1 + \hat{H}_2 .
+    \end{aligned}
+    $$
+
+    <h3>1.1 A Subsection Heading</h3>
+
+    <p>
+      Subsections use the smaller heading style. You can <a href="#">link to references</a>,
+      use <em>emphasis</em>, <strong>strong emphasis</strong>, and
+      <code>inline code</code> freely.
+    </p>
+
+    <ul>
+      <li>First point in an unordered list.</li>
+      <li>Second point, with math: $\int_0^\infty e^{-x^2}\,dx = \tfrac{\sqrt{\pi}}{2}$.</li>
+      <li>Third point.</li>
+    </ul>
+
+    <blockquote>
+      A pull quote or key takeaway can be set apart like this, in italics with a slate rule.
+    </blockquote>
+
+    <h2>2. Figures</h2>
+
+    <p>
+      Figures are slightly wider than the text column on large screens. Replace the
+      placeholder box with an <code>&lt;img&gt;</code> tag.
+    </p>
+
+    <figure>
+      <!-- <img src="img/figure1.png" alt="Description of figure"> -->
+      <div class="figure-ph">Figure placeholder (16:9)</div>
+      <figcaption><strong>Figure 1.</strong> A descriptive caption explaining what the figure shows and how to read it.</figcaption>
+    </figure>
+
+    <h2>3. Embedded Video</h2>
+
+    <p>
+      Paste a YouTube/Vimeo embed <code>&lt;iframe&gt;</code> (or a local
+      <code>&lt;video&gt;</code>) inside the frame below.
+    </p>
+
+    <div class="video">
+      <div class="video-frame">
+        <!--
+          Replace this text with, for example:
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title"
+                  allowfullscreen loading="lazy"></iframe>
+        -->
+        Video placeholder (16:9)
+      </div>
+      <figcaption style="font-family:var(--font-sans);font-size:.85rem;color:var(--muted);margin:10px 0 0">
+        <strong>Video 1.</strong> Caption for the embedded video.
+      </figcaption>
+    </div>
+
+    <h2>4. Code</h2>
+
+<pre><code>import numpy as np
+
+def hamiltonian(h, g):
+    """Placeholder code block."""
+    return h + 0.5 * g
+</code></pre>
+
+    <h2>5. Conclusion</h2>
+
+    <p>
+      Wrap up with a short summary of the main result and pointers to further reading.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat.
+    </p>
+
+    <section class="references">
+      <h2>References</h2>
+      <ol>
+        <li>A. Author, B. Author, <em>Title of the paper</em>, Journal <strong>12</strong>, 345 (2024).</li>
+        <li>C. Author, <em>Title of the book</em>, Publisher (2020).</li>
+      </ol>
+    </section>
+
+  </article>
+
+  <nav class="article-foot">
+    <a href="blog.html">&larr; All articles</a>
+    <a href="#">Next article &rarr;</a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; <span id="year">2026</span> Your Name</span>
+    <span>Last updated: Month YYYY</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

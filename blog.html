@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a class="active" href="blog.html">Blog</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-lede">Notes, derivations and explainers on topics from my research.</p>
+
+    <div class="filters">
+      <button class="on" data-tag="all">All</button>
+      <button data-tag="theory">Theory</button>
+      <button data-tag="methods">Methods</button>
+      <button data-tag="notes">Notes</button>
+    </div>
+
+    <!--
+      To add a post: copy one <a class="card"> block.
+      - href: the article page (duplicate article.html, e.g. my-post.html)
+      - data-tags: space-separated tags matching the filter buttons
+      - thumbnail: replace the placeholder text inside .thumb with
+        <img src="img/my-thumb.jpg" alt="">
+    -->
+    <div class="grid">
+
+      <a class="card" href="article.html" data-tags="theory">
+        <div class="thumb">&#8747; f(x)dx</div>
+        <div class="card-meta">Oct 15, 2026 &middot; 12 min read</div>
+        <h3>A Long-Form Article Title With Equations</h3>
+        <p>A two-line summary of the article that makes the reader want to click through.</p>
+      </a>
+
+      <a class="card" href="article.html" data-tags="methods">
+        <div class="thumb t2">&#8706;&#968;/&#8706;t</div>
+        <div class="card-meta">Sep 28, 2026 &middot; 8 min read</div>
+        <h3>Explaining a Method Step by Step</h3>
+        <p>Short description of what the reader will learn and why it matters.</p>
+      </a>
+
+      <a class="card" href="article.html" data-tags="theory notes">
+        <div class="thumb t3">&#8721; &#955;&#7522;</div>
+        <div class="card-meta">Sep 02, 2026 &middot; 15 min read</div>
+        <h3>Derivation Notes on a Key Result</h3>
+        <p>Short description of the derivation and the intuition behind it.</p>
+      </a>
+
+      <a class="card" href="article.html" data-tags="notes">
+        <div class="thumb t4">&#8463;</div>
+        <div class="card-meta">Aug 11, 2026 &middot; 6 min read</div>
+        <h3>Reading Notes: A Paper Worth Revisiting</h3>
+        <p>Short description of the paper and your takeaways.</p>
+      </a>
+
+      <a class="card" href="article.html" data-tags="methods">
+        <div class="thumb">&#8711;&#178;</div>
+        <div class="card-meta">Jul 19, 2026 &middot; 10 min read</div>
+        <h3>A Practical Guide to a Numerical Technique</h3>
+        <p>Short description of the technique and where it is used.</p>
+      </a>
+
+      <a class="card" href="article.html" data-tags="theory">
+        <div class="thumb t2">&#8855;</div>
+        <div class="card-meta">Jun 03, 2026 &middot; 9 min read</div>
+        <h3>An Introduction to a Core Concept</h3>
+        <p>Short description aimed at readers from neighbouring fields.</p>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; <span id="year">2026</span> Your Name</span>
+    <span>Last updated: Month YYYY</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
